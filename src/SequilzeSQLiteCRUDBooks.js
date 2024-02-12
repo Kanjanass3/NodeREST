@@ -10,7 +10,7 @@ const sequelize = new Sequelize('database','username','password',{
     storage: './Database/SQBooks.sqlite'
 });
 
-const Book = sequelize.define('books',{
+const Book = sequelzie.define('books',{
     id:{
         type: Sequelize.INTEGER,
         autoIncrement: true,
@@ -89,4 +89,4 @@ app.delete('/books/:id',(req,res) => {
 });
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Example app listening at http://localhost:${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}...`));
