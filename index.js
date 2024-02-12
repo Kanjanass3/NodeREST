@@ -49,7 +49,7 @@ app.get('/books/:id',(req, res) =>{
 });
 
 app.post('/books',(req, res) =>{
-    Book.create(rea.body).then(book => {
+    Book.create(req.body).then(book => {
         res.send(book);
     }).catch(err => {
             res.status(500).send(err);
