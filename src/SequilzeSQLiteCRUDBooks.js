@@ -1,9 +1,10 @@
 const express = require('express');
 const Sequelize = require('sequelize');
 const app = express();
+const cors = require('cors');
 
 app.use(express.json());
-
+app.use(cors());
 const sequelize = new Sequelize('database','username','password',{
     host: 'localhost',
     dialect: 'sqlite',
